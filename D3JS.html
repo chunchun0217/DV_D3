@@ -7,10 +7,12 @@
   
 <body>
   <script>
+    var cdata = [{cx:100,cy:50,r:50,color:"fffff"},{cx:150,cy:50,r:50,color:"fffff"}]
+    
     var svgctrl = d3.select("body").append("svg").attr("width",500).attr("height",500);
-    var addC = svgctrl.append("circle").attr("cx",150).attr("cy",150).attr("r",50).attr("stroke-width",3);
-    var addR2 = svgctrl.append("rect").attr("x",50).attr("y",100).attr("width",50).attr("height",100);
-    var addR3 = svgctrl.append("rect").attr("x",200).attr("y",100).attr("width",50).attr("height",100);
+    var addDataToC = svgctrl.selectAll("circle").data(cdata).enter().append("circle");
+    var circlePlot = addDataToC.attr("cx",function(d){return d.cx;}).attr("cy",function(d){return d.cy;}).attr("r",function(d){return d.r;}).attr("fill",function(d){return d.color;});
+    
     
   </script>
 </body>
