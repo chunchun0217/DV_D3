@@ -16,7 +16,7 @@ d3.csv("./usdrate.csv",
 		var ln = data.length;
 		console.log(data);
 		var maxy = d3.max(data, function(d){ return d.cash; });
-		var lines = d3.line().x(function(d,i){return i*(width/ln);}).y(function(d){return height-d.people*(height/maxy) });
+		var lines = d3.line().x(function(d,i){return i*(width/ln);}).y(function(d){return height-d.cash*(height/maxy) });
 		ctrl.append("path").data([data]).attr("d", lines).attr("stroke", "red").attr("fill", "none");
 	}
 
