@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+w<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -11,14 +11,14 @@
    <title> Word Cloud </title>
 </head>
   <body>
-    <div id='wordcloud'></div>
+    <div id="cloud"></div>
     <script type="text/javascript">
     <script>
     d3.csv("./d3cloud.csv",
     function(data){
       d3.wordcloud()
         .size([800, 400])
-        .selector('#wordcloud')
+        .selector('#cloud')
         .words(data)
         .start();
         }
