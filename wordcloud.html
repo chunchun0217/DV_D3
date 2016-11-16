@@ -15,7 +15,7 @@
     <script type="text/javascript">
     d3.csv("./d3cloud.csv",
     function(data){
-      d3.cloud()
+      d3.wordcloud()
         .size([800, 400])
         .selector('#wordcloud')
         .words(data)
